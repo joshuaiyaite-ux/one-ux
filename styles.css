@@ -1,0 +1,192 @@
+/* ============================
+   CSS Variables
+============================ */
+:root {
+    --primary-blue: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --background: #f9fafb;
+    --white: #ffffff;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --border: #d1d5db;
+    --border-focus: #2563eb;
+    --success: #10b981;
+    --error: #ef4444;
+    --warning: #f59e0b;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+}
+
+/* ============================
+   Global Styles
+============================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ============================
+   Form Container
+============================ */
+.form-container {
+    background: var(--white);
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+/* ============================
+   Fieldsets & Legends
+============================ */
+fieldset {
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-blue);
+    padding: 0 10px;
+}
+
+/* ============================
+   Labels & Inputs
+============================ */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--border-focus);
+    outline: none;
+    box-shadow: 0 0 4px var(--primary-light);
+}
+
+::placeholder {
+    color: var(--text-light);
+}
+
+/* ============================
+   Radio & Checkbox
+============================ */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* ============================
+   Buttons
+============================ */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button.reset {
+    background-color: var(--accent-pink);
+}
+
+button.reset:hover {
+    background-color: #be185d;
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 500px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
